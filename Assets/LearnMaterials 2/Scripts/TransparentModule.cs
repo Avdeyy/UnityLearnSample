@@ -6,6 +6,7 @@ using UnityEngine;
 [HelpURL("https://docs.google.com/document/d/1Cmm__cbik5J8aHAI6PPaAUmEMF3wAcNo3rpgzsYPzDM/edit?usp=sharing")]
 public class TransparentModule : MonoBehaviour
 {
+    [SerializeField,Range(0.1f, 2)]
     private float changeSpeed;
 
     private float defaultAlpha;
@@ -19,6 +20,7 @@ public class TransparentModule : MonoBehaviour
         toDefault = false;
     }
 
+    [ContextMenu("Õ” ƒ¿¬¿…, Õ¿∆Ã»")]
     public void ActivateModule()
     {
         float target = toDefault ? defaultAlpha : 0;

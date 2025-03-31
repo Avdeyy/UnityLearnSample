@@ -4,8 +4,10 @@ using UnityEngine;
 [HelpURL("https://docs.google.com/document/d/1rdTEVSrCcYOjqTJcFCHj46RvnbdJhmQUb3gHMDhVftI/edit?usp=sharing")]
 public class ScalerModule : MonoBehaviour
 {
+    [SerializeField]
     private Vector3 targetScale = new Vector3(2,2,2);
 
+    [SerializeField, Range(0.1f, 2f)]
     private float changeSpeed;
 
     private Vector3 defaultScale;
@@ -19,6 +21,7 @@ public class ScalerModule : MonoBehaviour
         toDefault = false;
     }
 
+    [ContextMenu("Õ” ƒ¿¬¿…, Õ¿∆Ã» Õ¿ Ã≈Õﬂ, “€")]
     public void ActivateModule()
     {
         Vector3 target = toDefault ? defaultScale : targetScale;
